@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "7bf9f7bb-0870-474b-b733-472557657d32",
+		"name": "React Jr Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21541923",
+		"_collection_link": "https://coderslab-apis.postman.co/workspace/Team-Workspace~9e2bc498-2ba8-4af7-8a21-87a5ce7ff82d/collection/21541923-7bf9f7bb-0870-474b-b733-472557657d32?action=share&source=collection_link&creator=21541923"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}products?search=Ru&per_page=10&page",
+							"host": [
+								"{{host}}products"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Ru"
+								},
+								{
+									"key": "per_page",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Product A\",\r\n  \"brand\": \"Brand X\",\r\n  \"type\": \"Mug\",\r\n  \"origin\": \"Country Z\",\r\n  \"variants\": [\r\n    {\r\n      \"color\": \"Red\",\r\n      \"specification\": \"Specification 1\",\r\n      \"size\": \"large\"\r\n    },\r\n    {\r\n      \"color\": \"Blue\",\r\n      \"specification\": \"Specification 2\",\r\n      \"size\": \"medium\"\r\n    },\r\n    {\r\n      \"color\": \"Green\",\r\n      \"specification\": \"Specification 3\",\r\n      \"size\": \"small\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}products",
+							"host": [
+								"{{host}}products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}products/2",
+							"host": [
+								"{{host}}products"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_method\": \"PUT\",\r\n    \"name\": \"Updated Product AX\",\r\n    \"brand\": \"Updated Brand X\",\r\n    \"type\": \"Glass\",\r\n    \"origin\": \"Updated Country Z\",\r\n    \"variants\": [\r\n        {\r\n            \"id\": 11,\r\n            \"color\": \"Red\",\r\n            \"specification\": \"Updated Specification 1\",\r\n            \"size\": \"large\"\r\n        },\r\n        {\r\n            \"id\": 12,\r\n            \"color\": \"Blue\",\r\n            \"specification\": \"Updated Specification 2\",\r\n            \"size\": \"medium\"\r\n        },\r\n        {\r\n            \"color\": \"Green\",\r\n            \"specification\": \"Updated Specification 3\",\r\n            \"size\": \"small\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}products/2",
+							"host": [
+								"{{host}}products"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": ""
+							}
+						],
+						"url": {
+							"raw": "{{host}}products/1001",
+							"host": [
+								"{{host}}products"
+							],
+							"path": [
+								"1001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}orders",
+							"host": [
+								"{{host}}orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"johndoe@example.com\",\r\n    \"address\": \"123 Main St\",\r\n    \"total_quantity\": 10,\r\n    \"details\": [\r\n        {\r\n            \"variant_id\": 1,\r\n            \"quantity\": 5\r\n        },\r\n        {\r\n            \"variant_id\": 2,\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}orders",
+							"host": [
+								"{{host}}orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{host}}orders/1",
+							"host": [
+								"{{host}}orders"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_method\": \"PUT\",\r\n    \"name\": \"Jane Smith\",\r\n    \"email\": \"janesmith@example.com\",\r\n    \"address\": \"456 Elm St\",\r\n    \"total_quantity\": 20,\r\n    \"details\": [\r\n        {\r\n            \"id\": 1,\r\n            \"variant_id\": 1,\r\n            \"quantity\": 7\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"variant_id\": 2,\r\n            \"quantity\": 8\r\n        },\r\n        {\r\n            \"variant_id\": 23,\r\n            \"quantity\": 5\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}orders/1",
+							"host": [
+								"{{host}}orders"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}orders/4",
+							"host": [
+								"{{host}}orders"
+							],
+							"path": [
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
