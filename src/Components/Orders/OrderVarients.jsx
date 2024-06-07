@@ -12,10 +12,10 @@ const OrderVarients = () => {
 {/* Put this part before </body> tag */}
 <input type="checkbox" id="my_modal_7" className="modal-toggle "/>
 
-<div className="modal mt-10" role="dialog">
+<div className="modal mt-20" role="dialog">
     
   <div className="w-full bg-white h-full px-16 ">
-  <h1 className='text-center text-2xl mb-10 font-semibold '>Orders Varients</h1>
+  <h1 className='text-center text-2xl mb-4 font-semibold '>Orders Varients</h1>
   <div className="overflow-x-auto">
   <table className="table table-zebra">
     {/* head */}

@@ -8,9 +8,9 @@ const OrderCreates = () => {
 
   return (
     <div className='flex justify-between'>
-    <label htmlFor="my_modal_6" className="btn px-10">Create</label>
+    <label htmlFor="my_modal_6" className="btn px-10  btn-outline btn-primary">Create</label>
   <input type="checkbox" id="my_modal_6" className="modal-toggle" />
-<div className="modal mt-10 "  role="dialog">
+<div className="modal mt-20 "  role="dialog">
 <div className="w-full bg-white h-full px-16 " >
 <h3 className="font-semibold text-center text-2xl ">Order(Create)</h3>
 <div  >

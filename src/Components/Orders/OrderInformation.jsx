@@ -9,7 +9,7 @@ const OrderInformation = () => {
 
 
 <input type="checkbox" id="my_modal_8" className="modal-toggle "/>
-<div className="modal mt-10" style={{maxWidth: "100% !important", maxHeight:"100% !important ", backgroundColor:"white", padding:"20px"}}  role="dialog" >
+<div className="modal mt-16" style={{ backgroundColor:"white", padding:"20px"}}  role="dialog" >
   <div >
     <h1 className='text-center text-2xl mb-10 font-semibold '>Information</h1>
   <div className='flex mb-6 gap-4'>
