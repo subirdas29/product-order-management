@@ -8,26 +8,42 @@ const OrderCreates = () => {
 <div className="modal" role="dialog">
 <div className="modal-box">
 <h3 className="font-semibold text-center text-lg mb-10">Product (Create/View/Edit)</h3>
-<div>
-<div className='flex mb-6 gap-4'>
-<input type="text" placeholder="Name" className="input input-bordered input-info w-full max-w-xs" />
-<input type="text" placeholder="Brand" className="input input-bordered input-info w-full max-w-xs" />
-</div>
-<div className='flex gap-4'>
-<input type="text" placeholder="Type" className="input input-bordered input-info w-full max-w-xs" />
-<input type="text" placeholder="Origin" className="input input-bordered input-info w-full max-w-xs" />
-</div>
-</div>
-<div className='mt-10'>
-<h3 className="font-semibold text-center text-lg mb-10">Variants</h3>
-<div className='flex gap-4'>
-<input type="text" placeholder="Color" className="input input-bordered input-info w-full max-w-xs" />
-<input type="text" placeholder="Specification" className="input input-bordered input-info w-full max-w-xs" />
-<input type="text" placeholder="Size" className="input input-bordered input-info w-full max-w-xs" />
-<button className="btn btn-info">+</button>
-<button className="btn btn-info">-</button>
-</div>
-</div>
+<div >
+      <div className="overflow-x-auto">
+  <table className="table table-zebra">
+    {/* head */}
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Brand</th>
+        <th>Type</th>
+        <th>Created At</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+  
+     <tbody>
+      
+      {
+        products?.data?.data?.map(product => <tr key={product.id}>
+          <td>{product.id}</td>
+          <td>{product.name}</td>
+          <td>{product.brand}</td>
+          <td>{product.type}</td>
+          <td>{product.created_at}</td>
+          <td>view | Edit | Delete</td>
+          </tr>
+        )
+      
+}
+      
+    </tbody>
+     
+   
+    </table>
+    </div>
+    </div>
 
 <div className="modal-action">
   <label htmlFor="my_modal_6" className="btn">Cancel</label>

@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ProductsList from './ProductsList';
 import ProductCreates from './ProductCreates';
+import { ProductContext } from '../../Context/ProductProvider';
 
 
 
 const Products = () => {
    
-  const [products, setProducts] = useState([]);
-
-  useEffect(()=>{
-    fetch('https://reactjr.coderslab.online/api/products')
-    .then((res)=>res.json())
-    .then(data => setProducts(data))
-  },[])
-
+  const {products} = useContext(ProductContext)
   return (
 
    <div className='mx-20'>
