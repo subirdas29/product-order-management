@@ -10,11 +10,15 @@ const OrderCreates = () => {
     <div className='flex justify-between'>
     <label htmlFor="my_modal_6" className="btn px-10">Create</label>
   <input type="checkbox" id="my_modal_6" className="modal-toggle" />
-<div className="modal" role="dialog">
-<div className="modal-box"  style={{maxWidth: "0 !important", maxHeight:"0 !important"}}>
-<h3 className="font-semibold text-center text-lg mb-10">Order(Create)</h3>
-<div >
-      <div className="overflow-x-auto">
+<div className="modal mt-10 "  role="dialog">
+<div className="w-full bg-white h-full px-16 " >
+<h3 className="font-semibold text-center text-2xl ">Order(Create)</h3>
+<div  >
+<div className='flex justify-between'>
+    <div></div> 
+<input type="text" placeholder='search' className='border-2 h-full border-slate-300 px-4 py-2'/>
+</div>
+      <div className="overflow-x-auto ">
   <table className="table table-zebra">
     {/* head */}
     <thead>

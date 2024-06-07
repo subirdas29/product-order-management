@@ -11,7 +11,7 @@ const Orders = () => {
   
     return (
   
-     <div className='mx-20 my-10'>
+     <div className='mx-20 '>
         <OrderCreates></OrderCreates>
         <OrdersList orders = {orders}></OrdersList>
       

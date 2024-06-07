@@ -5,7 +5,7 @@ const OrdersList = ({orders}) => {
   return (
     <div>
        <div >
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto ">
   <table className="table table-zebra">
     {/* head */}
     <thead>

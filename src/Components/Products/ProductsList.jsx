@@ -27,7 +27,7 @@ const ProductsList = ({products}) => {
           <td>{product.brand}</td>
           <td>{product.type}</td>
           <td>{product.created_at}</td>
-          <td>view | Edit | Delete</td>
+          <td className='text-red'>View | Edit | Delete</td>
           </tr>
         )
       

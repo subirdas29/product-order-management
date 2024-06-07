@@ -12,6 +12,7 @@ import Products from './Components/Products/Products';
 import Orders from './Components/Orders/Orders';
 import ProductProvider from './Context/ProductProvider';
 import OrderProvider from './Context/OrderProvider';
+import Home from './Components/Home/Home';
 
 
 
@@ -19,12 +20,19 @@ import OrderProvider from './Context/OrderProvider';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Products></Products>
+    element: <Home></Home>,
+    children:[
+      {
+        path: "/",
+        element: <Products></Products>
+      },
+      {
+        path: "/orders",
+        element: <Orders></Orders>
+      }
+    ]
   },
-  {
-    path: "/orders",
-    element: <Orders></Orders>
-  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
