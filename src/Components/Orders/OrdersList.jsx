@@ -1,6 +1,7 @@
 import React from 'react'
 
 const OrdersList = ({orders}) => {
+  console.log(orders)
   return (
     <div>
        <div >
