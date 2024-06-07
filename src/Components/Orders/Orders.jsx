@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import OrdersList from './OrdersList';
+import OrderCreates from './OrderCreates';
 
 const Orders = () => {
 
@@ -14,7 +15,7 @@ const Orders = () => {
     return (
   
      <div className='mx-20'>
-
+        <OrderCreates></OrderCreates>
         <OrdersList orders = {orders}></OrdersList>
       
      </div>
