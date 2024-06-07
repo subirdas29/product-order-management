@@ -9,7 +9,7 @@ const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(()=>{
-    fetch('https://reactjr.coderslab.online/api/products?page=2')
+    fetch('https://reactjr.coderslab.online/api/products')
     .then((res)=>res.json())
     .then(data => setProducts(data))
   },[])

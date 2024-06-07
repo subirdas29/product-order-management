@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 import Products from './Components/Products/Products';
+import Orders from './Components/Orders/Orders';
 
 function App() {
 
@@ -12,7 +13,9 @@ function App() {
             <h1>Product Management</h1>
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<Products/>}></Route>
+                <Route path='/' element={<Orders/>}></Route>
+                    {/* <Route path='/' element={<Products/>}></Route> */}
+                   
                 </Routes>
             </BrowserRouter>
         </div>

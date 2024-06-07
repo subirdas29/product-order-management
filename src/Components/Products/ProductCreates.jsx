@@ -24,6 +24,8 @@ const ProductCreates = () => {
   <input type="text" placeholder="Color" className="input input-bordered input-info w-full max-w-xs" />
   <input type="text" placeholder="Specification" className="input input-bordered input-info w-full max-w-xs" />
   <input type="text" placeholder="Size" className="input input-bordered input-info w-full max-w-xs" />
+  <button className="btn btn-info">+</button>
+  <button className="btn btn-info">-</button>
   </div>
    </div>
 
