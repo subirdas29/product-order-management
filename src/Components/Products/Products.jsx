@@ -5,9 +5,11 @@ import { ProductContext } from '../../Context/ProductProvider';
 
 
 
+
 const Products = () => {
    
   const {products} = useContext(ProductContext)
+  console.log(products)
   return (
 
    <div className='mx-20'>

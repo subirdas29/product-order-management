@@ -10,7 +10,9 @@ import {
 } from "react-router-dom";
 import Products from './Components/Products/Products';
 import Orders from './Components/Orders/Orders';
-import { ProductProvider } from './Context/ProductProvider';
+import ProductProvider from './Context/ProductProvider';
+import OrderProvider from './Context/OrderProvider';
+
 
 
 
@@ -27,8 +29,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ProductProvider>
-    <RouterProvider router={router} />
-    </ProductProvider>
+   <ProductProvider>
+   <OrderProvider>
+   <RouterProvider router={router} />
+   </OrderProvider>
+   </ProductProvider>
+    
+ 
   </React.StrictMode>,
 )

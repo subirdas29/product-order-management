@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ProductContext } from '../../Context/ProductProvider'
 
 const OrderCreates = () => {
+
+    const {products} = useContext(ProductContext)
+
   return (
     <div className='flex justify-between'>
     <label htmlFor="my_modal_6" className="btn px-10">Create</label>

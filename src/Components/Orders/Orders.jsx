@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import OrdersList from './OrdersList';
 import OrderCreates from './OrderCreates';
+import { OrderContext } from '../../Context/OrderProvider';
 
 const Orders = () => {
 
-    const [orders, setOrders] = useState([]);
+   const {orders}= useContext(OrderContext)
 
-    useEffect(()=>{
-      fetch('https://reactjr.coderslab.online/api/orders')
-      .then((res)=>res.json())
-      .then(data => setOrders(data))
-    },[])
+   console.log(orders)
   
     return (
   

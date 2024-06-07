@@ -1,6 +1,7 @@
+import { createContext, useEffect, useState } from "react";
 
 
-export const ProductContext = createContext();
+export const ProductContext = createContext(null);
 
 const ProductProvider = ({children}) => {
 
@@ -21,3 +22,4 @@ const ProductProvider = ({children}) => {
 }
 
 export default ProductProvider;
+
