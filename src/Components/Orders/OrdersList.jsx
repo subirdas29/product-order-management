@@ -9,7 +9,7 @@ const OrdersList = ({orders}) => {
   <table className="table table-zebra">
     {/* head */}
     <thead>
-      <tr>
+      <tr className='text-lg'>
         <th>ID</th>
         <th>Name</th>
         <th>Email</th>
@@ -31,7 +31,7 @@ const OrdersList = ({orders}) => {
           <td>{order.total_quantity}</td>
           <td>{order.created_at}</td>
          
-          <td>view | Edit | Delete</td>
+          <td className='text-red-600 font-bold'>view | Edit | Delete</td>
           </tr>
         )
       

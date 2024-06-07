@@ -8,7 +8,7 @@ const ProductsList = ({products}) => {
   <table className="table table-zebra">
     {/* head */}
     <thead>
-      <tr>
+      <tr className='text-lg'>
         <th>ID</th>
         <th>Name</th>
         <th>Brand</th>
@@ -27,7 +27,7 @@ const ProductsList = ({products}) => {
           <td>{product.brand}</td>
           <td>{product.type}</td>
           <td>{product.created_at}</td>
-          <td className='text-red'>View | Edit | Delete</td>
+          <td className='text-red-600 font-bold'>View | Edit | Delete</td>
           </tr>
         )
       

@@ -20,7 +20,7 @@ const OrderVarients = () => {
   <table className="table table-zebra">
     {/* head */}
     <thead>
-      <tr>
+      <tr className='text-lg'>
         <th>ID</th>
         <th>Color</th>
         <th>Specification</th>
