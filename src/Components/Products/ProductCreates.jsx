@@ -61,21 +61,20 @@ const ProductCreates = () => {
     };
     console.log(nextId)
     console.log(newProduct)
-   console.log({name,brand,type,origin,color,spec,size})
+
 
    fetch('https://reactjr.coderslab.online/api/products', {
-    method: 'POST',
+    method: "POST",
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(newProduct),
   })
-  .then(response => response.json())
-  .then(data => {
-    alert('Product added successfully!');
-    navigate('/');
-
+  .then((res)=> {
+    alert('Product added successfully!')
+    navigate('/'); 
   })
+
   .catch(error => console.error('Error adding product:', error));
 };
 
