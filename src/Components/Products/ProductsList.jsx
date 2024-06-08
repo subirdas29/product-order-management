@@ -1,6 +1,9 @@
 import React from 'react'
+import { Link, useLoaderData } from 'react-router-dom'
 
 const ProductsList = ({products}) => {
+  
+
   return (
     <div>
        <div >
@@ -27,7 +30,7 @@ const ProductsList = ({products}) => {
           <td>{product.brand}</td>
           <td>{product.type}</td>
           <td>{product.created_at}</td>
-          <td className='text-red-600 font-bold'>View | Edit | Delete</td>
+          <td className='text-red-600 font-bold'><span><Link to={`/product/${product?.id}`}>View</Link></span>| Edit | Delete</td>
           </tr>
         )
       

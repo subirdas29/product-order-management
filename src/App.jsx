@@ -12,15 +12,8 @@ function App() {
 
     return (
         <div>
-            <h1>Product Management</h1>
+      
           
-           <BrowserRouter>
-                <Routes>
-                {/* <Route path='/' element={<Orders/>}></Route> */}
-                    <Route path='/' element={<Products/>}></Route>
-                   
-                </Routes>
-            </BrowserRouter>
          
         </div>
 

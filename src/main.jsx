@@ -13,6 +13,9 @@ import Orders from './Components/Orders/Orders';
 import ProductProvider from './Context/ProductProvider';
 import OrderProvider from './Context/OrderProvider';
 import Home from './Components/Home/Home';
+import ProductsDetails from './Components/Products/ProductsDetails';
+import ProductsList from './Components/Products/ProductsList';
+import { productLoader } from './Components/Products/ProductLoader';
 
 
 
@@ -26,6 +29,16 @@ const router = createBrowserRouter([
         path: "/",
         element: <Products></Products>
       },
+      {
+        path: "/product/:id",
+        element: <ProductsDetails />,
+        loader: productLoader,
+      },
+      // {
+      //   path: "/product/:productId",
+      //   loader: ({params})=>{fetch(`https://reactjr.coderslab.online/api/products/${params.productId}`)},
+      //   element: <ProductsDetails></ProductsDetails>
+      // },
       {
         path: "/orders",
         element: <Orders></Orders>
