@@ -71,6 +71,7 @@ const ProductCreates = () => {
     body: JSON.stringify(newProduct),
   })
   .then((res)=> {
+    console.log(res)
     alert('Product added successfully!')
     navigate('/'); 
   })
