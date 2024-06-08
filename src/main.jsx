@@ -16,6 +16,7 @@ import Home from './Components/Home/Home';
 import ProductsDetails from './Components/Products/ProductsDetails';
 
 import { productLoader } from './Components/Products/ProductLoader';
+import ProductsEdit from './Components/Products/ProductsEdit';
 
 
 
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         path: "/product/:id",
         element: <ProductsDetails />,
         loader: productLoader,
+      },
+      {
+        path: "/product/edit/:editId",
+        element: <ProductsEdit />,
       },
    
       {

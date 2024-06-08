@@ -36,7 +36,7 @@ const ProductsList = ({products}) => {
           <td>{product.brand}</td>
           <td>{product.type}</td>
           <td>{product.created_at}</td>
-          <td className='text-red-600 font-bold'><span><Link to={`/product/${product?.id}`}>View</Link></span>| <span>  <Link to={`/product/${product?.id}`}>Edit</Link></span>| <span onClick={()=>{removeFunction(product.id)}}>Delete</span></td>
+          <td className='text-red-600 font-bold'><span><Link to={`/product/${product?.id}`}>View</Link></span>| <span>  <Link to={`/product/edit/${product?.id}`}>Edit</Link></span>| <span onClick={()=>{removeFunction(product.id)}}>Delete</span></td>
          
           {/* // onClick={()=>{loadEdit(product.id)}} */}
           </tr>
