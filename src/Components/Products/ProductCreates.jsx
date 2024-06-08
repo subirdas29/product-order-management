@@ -1,36 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-// import { v4 as uuidv4 } from 'uuid';
-// import { useHistory } from 'react-router-dom';
+
 const ProductCreates = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    // Fetch the last used ID or determine it based on existing products
-    // Example: Fetching the last ID from your JSON server
+   
     fetch('https://reactjr.coderslab.online/api/products')
       .then(response => response.json())
       .then(data => {
-        const lastProductId = Math.max(...data.data.data.map(product => product.id),1000 ); // Assuming 900 is the starting ID
-        setNextId(lastProductId + 1); // Set the next available ID
+        const lastProductId = Math.max(...data.data.data.map(product => product.id),1000 ); 
+        setNextId(lastProductId + 1); 
       })
       .catch(error => console.error('Error fetching products:', error));
   }, []);
 
   useEffect(() => {
-    // Fetch the last used ID or determine it based on existing products
-    // Example: Fetching the last ID from your JSON server
+
     fetch('https://reactjr.coderslab.online/api/products')
       .then(response => response.json())
       .then(data => {
-        const lastVariantId = Math.max(...data.data.data.map(product => product.id),10030 ); // Assuming 900 is the starting ID
-        setVariantId(lastVariantId + 1); // Set the next available ID
+        const lastVariantId = Math.max(...data.data.data.map(product => product.id),10030 ); 
+        setVariantId(lastVariantId + 1); 
       })
       .catch(error => console.error('Error fetching products:', error));
   }, []);
 
-  // const [id, setId] = useState(uuidv4()); 
 
-  // console.log(id)
   const [nextId, setNextId] = useState(1000);
   const [variantId, setVariantId] = useState(10030);
   const [name, setName] = useState("")
@@ -40,11 +35,11 @@ const ProductCreates = () => {
   const [color, setColor] = useState("")
   const [spec, setSpec] = useState("")
   const [size, setSize] = useState("")
-  // const history = useHistory();
+ 
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    // const navigate = useNavigate();
+   
 
     const newProduct = {
       id: nextId,
@@ -79,15 +74,12 @@ const ProductCreates = () => {
   .then(data => {
     alert('Product added successfully!');
     navigate('/');
-    // history.push('/'); // Navigate to the home page or product list after successful addition
+
   })
   .catch(error => console.error('Error adding product:', error));
 };
 
 
-  // const handleGenerateId = () => {
-  //   setId(uuidv4());
-  // };
 
   const handleNameChange = (e)=>{
     setName(e.target.value)
@@ -123,7 +115,7 @@ const ProductCreates = () => {
    <div className='mx-28'>
    <div className='flex mb-6 gap-4'>
    <input type="text" placeholder="Name" onChange={handleNameChange} name='name' className="input input-bordered input-info w-full max-w-xs" />
-   {/* <input type="text" placeholder="Id" value={id} className="input input-bordered input-info w-full max-w-xs" /> */}
+
    <input type="text" placeholder="Brand" onChange={handleBrandChange} name='brand' className="input input-bordered input-info w-full max-w-xs" />
    </div>
   <div className='flex gap-4'>
