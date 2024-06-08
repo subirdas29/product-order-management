@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useNavigate} from 'react-router-dom'
 
 const ProductsList = ({products}) => {
-  const navigate = useNavigate()
-  const loadEdit=(id)=>{
-    navigate("/")
-  }
-  const removeFunction=(id)=>{
 
-  }
+  // const [empdata, empdatachange] = useState(null);
+    const navigate = useNavigate();
+  const LoadEdit = (id) => {
+    navigate("/product/edit/" + id);
+}
+  // const removeFunction=(id)=>{
+
+  // }
 
   return (
     <div>
@@ -36,7 +38,7 @@ const ProductsList = ({products}) => {
           <td>{product.brand}</td>
           <td>{product.type}</td>
           <td>{product.created_at}</td>
-          <td className='text-red-600 font-bold'><span><Link to={`/product/${product?.id}`}>View</Link></span>| <span>  <Link to={`/product/edit/${product?.id}`}>Edit</Link></span>| <span onClick={()=>{removeFunction(product.id)}}>Delete</span></td>
+          <td className='text-red-600 font-bold'><span><Link to={`/product/${product?.id}`}>View</Link></span>| <span>  <a onClick={() => { LoadEdit(product?.id) }}>Edit</a></span>| <span onClick={()=>{removeFunction(product.id)}}>Delete</span></td>
          
           {/* // onClick={()=>{loadEdit(product.id)}} */}
           </tr>
